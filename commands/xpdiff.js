@@ -10,13 +10,15 @@ module.exports = {
                       111945, 123660, 136594, 150872, 166636, 184040, 203254, 224466, 247886, 273742, 302288, 333804, 368599,
                       407015, 449428, 496254, 547953, 605032, 668051, 737627, 814445, 899257, 992895, 1096278, 1210421, 1336443,
                       1475581, 1629200, 1798808, 1986068, 2192818, 2421087, 2673114, 2951373, 3258594, 3597792, 3972294, 4385776,
-                      4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431];
-    if (args[0] < 1 || args[1] < 1 || args[0] > 99 || args[1] > 99) {
-      var commResp = "Invalid argument - please enter numbers between 1 and 99";
+                      4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431, 14391160,
+											15889109, 17542976, 19368992, 21385073, 23611006, 26068632, 28782069, 31777943, 35085654, 38737661, 42769801, 47221641,
+										52136869, 57563718, 63555443, 70170840, 77474828, 85539082, 94442737, 104273167];
+    if (args[0] < 1 || args[1] < 1 || args[0] > 120 || args[1] > 120) {
+      var commResp = "Invalid argument - please enter numbers between 1 and 120";
     }
     else {
       var xpDifference = Math.abs(levelArray[args[0]] - levelArray[args[1]]);
-      var commResp = "There is " + xpDifference + " experience between levels " + args[0] + " and " + args[1] + ".";
+      var commResp = "There is " + xpDifference.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " experience between levels " + args[0] + " and " + args[1] + ".";
     }
     message.reply(commResp);
   },
