@@ -58,6 +58,14 @@ Client.on("message", async message => {
   // Ignore if message if from another Bot
   if(message.author.bot) return;
 
+	// React to TLG with a toilet
+	if(message.author.tag === 'TLGG#6419') {
+		// console.log(`entering the react part..`);
+		message.react('🚽')
+	}
+
+
+
   // Ignore if message does not begin with prefix defined in config.json
   if(!message.content.startsWith(config.prefix)) return;
 
